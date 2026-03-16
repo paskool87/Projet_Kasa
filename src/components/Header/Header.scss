@@ -13,8 +13,9 @@ header {
   }
 
   nav {
-    width: 25%;
+    max-width: 300px;
     display: flex;
+    justify-content: space-between;
     gap: 70px;
     font-size: 24px;
 
@@ -22,5 +23,22 @@ header {
       text-decoration: none;
       color: black;
     }
+    .nav-link {
+      text-align: end;
+    }
+  }
+
+  /* mobile */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+
+    nav {
+      max-width: 600px;
+      width: 100% !important;
+      justify-content: space-between;
+      padding: 0 20px;
+      }
   }
 }
