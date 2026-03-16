@@ -1,5 +1,5 @@
 import logo from "../../assets/logos/Kasa_logo.svg";
-import "./Header.css"
+import "./Header.scss"
 
 
 function Header() {

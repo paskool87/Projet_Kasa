@@ -1,5 +1,5 @@
 import bannerImg from "../../assets/images/Image source 1.jpg";
-import "./Banner.css";
+import "./Banner.scss";
 
 function Banner() {
   return (

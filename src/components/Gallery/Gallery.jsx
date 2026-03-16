@@ -1,6 +1,6 @@
 import Card from "../Card/Card";
 import datas from "../../datas/logementsKasa.json";
-import "./Gallery.css";
+import "./Gallery.scss";
 
 function Gallery() {
   return (
