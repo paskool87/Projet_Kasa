@@ -1,5 +1,5 @@
 import Card from "../Card/Card";
-import datas from "../../datas/logementsKasa.json";
+import datas from "../../Datas/logementsKasa.json";
 import "./Gallery.scss";
 
 function Gallery() {
@@ -7,7 +7,7 @@ function Gallery() {
     <div className="gallery">
       <div className="gallery-container">
         {datas.map((appart) => (
-          <Card key={appart.id} title={appart.title} cover={appart.cover} />
+          <Card key={appart.id} id={appart.id} title={appart.title} cover={appart.cover} />
         ))}
       </div>
     </div>
