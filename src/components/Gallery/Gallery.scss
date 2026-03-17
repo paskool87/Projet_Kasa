@@ -2,6 +2,11 @@
   display: flex;
   justify-content: center;
   margin: auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+
 
   &-container {
     display: flex;
@@ -10,9 +15,5 @@
     gap: 56px;
     padding: 0 50px 0 50px;
 
-    /*display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 3em;
-    gap: 4em;*/
   }
 }

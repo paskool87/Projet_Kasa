@@ -9,10 +9,23 @@
     object-fit: cover;
     border-radius: 25px;
   }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.85) 0%,
+      rgba(0,0,0,0.4) 40%,
+      rgba(0,0,0,0) 70%
+    );
+  }
 
   .card-title {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 20px;
     width: 90%;
     height: 50px;
@@ -21,5 +34,7 @@
     font-size: 18px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    z-index: 2;
   }
+  
 }
