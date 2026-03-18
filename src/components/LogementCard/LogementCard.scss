@@ -1,53 +1,78 @@
 .logement-card {
   margin: auto;
   max-width: 1240px;
+  position: relative;
+  padding-bottom: 20px;
+  border: 2px solid red;
 
   &-img {
     width: 100%;
     aspect-ratio: 3/1;
     object-fit: cover;
     border-radius: 25px;
+    margin-bottom: 30px;
   }
 
   &-title {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 500;
+    color: #ff6060;
   }
 
   &-location {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   &-host {
+    position: absolute;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    bottom: 80px;
+    right: 0;
+    width: fit-content;
+
+    &-name {
+      max-width: 120px;
+      font-size: 18px;
+      color: #ff6060;
+      text-align: end;
+    }
 
     img {
-      width: 40px;
-      height: 40px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       object-fit: cover;
+      background-color: #c4c4c4;
     }
   }
 
   &-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
+    margin-top: 20px;
   }
 
   &-tag {
+    width: 115px;
+    height: fit-content;
     background-color: #ff6060;
     color: white;
     padding: 4px 10px;
     border-radius: 10px;
-    font-size: 12px;
+    font-size: 14px;
+    text-align: center;
   }
 
   &-rating {
     display: flex;
     gap: 5px;
+    width: fit-content;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
 
     img {
       width: 20px;

@@ -20,7 +20,7 @@ function LogementCard({
       <h1 className="logement-card-title">{title}</h1>
       <p className="logement-card-location">{location}</p>
       <div className="logement-card-host">
-        {host.name} <img src={host.picture} alt={host.name} />
+        <div className="logement-card-host-name">{host.name} </div><img src={host.picture} alt={host.name} />
       </div>
       <div className="logement-card-tags">
         {tags.map((tag, index) => (
