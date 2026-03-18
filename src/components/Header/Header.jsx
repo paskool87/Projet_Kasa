@@ -9,7 +9,7 @@ function Header() {
 
       <nav>
         <Link to="/">Accueil</Link>
-        <Link to="/about">À propos</Link>
+        <Link to="/about" >À propos</Link>
       </nav>
     </header>
   );

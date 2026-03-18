@@ -4,9 +4,8 @@
   margin: auto;
   padding-top: 45px;
   padding-bottom: 45px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 25px;
-
 
   &-container {
     display: flex;
@@ -14,6 +13,17 @@
     justify-content: center;
     gap: 56px;
     padding: 0 50px 0 50px;
+  }
 
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+
+    &-container {
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
   }
 }
