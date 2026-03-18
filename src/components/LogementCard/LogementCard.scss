@@ -56,8 +56,8 @@
   }
 
   &-tag {
-    width: 115px;
-    height: fit-content;
+    min-width: 115px;
+    width: fit-content;
     background-color: #ff6060;
     color: white;
     padding: 4px 10px;
@@ -78,5 +78,24 @@
       width: 20px;
       height: 20px;
     }
+  }
+}
+
+.logement-card-low {
+  max-width: 1240px;
+  height: 52px;
+  margin: auto;
+  display: flex;
+  gap: 75px;
+  margin-top: 15px;
+
+  border: 2px solid red;
+
+  &-description {
+    flex: 1;
+  }
+
+  &-equipments {
+    flex: 1;
   }
 }

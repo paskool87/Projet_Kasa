@@ -1,0 +1,28 @@
+.dropdown {
+  width: 100%;
+  margin-bottom: 10px;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff6060;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  &-content {
+    background-color: #f6f6f6;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+}
