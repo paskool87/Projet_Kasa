@@ -18,7 +18,7 @@ function LogementCard({
     <li key={index}>{equipment}</li>
   ));
   return (
-    <>
+    <div className="logement-card-container">
       <div className="logement-card">
         <img src={cover} alt={title} className="logement-card-img" />
         <h1 className="logement-card-title">{title}</h1>
@@ -53,7 +53,7 @@ function LogementCard({
           <Dropdown title="Équipements" children={equipmentsList} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import arrow from "../../assets/icones/arrow.svg";
 import "./Dropdown.scss";
 
 function Dropdown({ title, children }) {
@@ -6,21 +7,25 @@ function Dropdown({ title, children }) {
 
   return (
     <div className="dropdown">
-      <div 
-        className="dropdown-header"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <div className="dropdown-hide"></div>
+      <div className="dropdown-header">
         <span>{title}</span>
         <span className={isOpen ? "arrow open" : "arrow"}>
-          ▼
+          <img
+            src={arrow}
+            alt="flèche de dropdown"
+            className="arrow-img"
+            onClick={() => setIsOpen(!isOpen)}
+          />
         </span>
       </div>
 
-      {isOpen && (
-        <div className="dropdown-content">
-          {children}
-        </div>
-      )}
+      { <div className={`dropdown-content ${isOpen ? "open" : "closed"}`}>{children}</div> }
+
+      {/*isOpen && <div className="dropdown-content">{children}</div>}
+      {!isOpen && <div className="dropdown-content-closed">{children}</div>*/}
+
+
     </div>
   );
 }
