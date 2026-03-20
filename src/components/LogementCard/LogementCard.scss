@@ -3,7 +3,6 @@
   max-width: 1240px;
   position: relative;
   padding-bottom: 20px;
-  border: 2px solid red;
 
   &-img {
     width: 100%;
@@ -88,7 +87,6 @@
   display: flex;
   gap: 75px;
   margin-top: 15px;
-  border: 2px solid red;
 
   &-description {
     flex: 1;
@@ -98,5 +96,8 @@
   &-equipments {
     flex: 1;
     border-radius: 10px;
+    li{
+    list-style: none;
+    }
   }
 }

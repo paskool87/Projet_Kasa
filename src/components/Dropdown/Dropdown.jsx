@@ -22,8 +22,6 @@ function Dropdown({ title, children }) {
 
       { <div className={`dropdown-content ${isOpen ? "open" : "closed"}`}>{children}</div> }
 
-      {/*isOpen && <div className="dropdown-content">{children}</div>}
-      {!isOpen && <div className="dropdown-content-closed">{children}</div>*/}
 
 
     </div>
