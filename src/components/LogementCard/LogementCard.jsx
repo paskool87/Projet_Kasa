@@ -1,3 +1,4 @@
+import Slider from "../../components/Slider/Slider";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import starActive from "../../assets/icones/star-active.svg";
 import starInactive from "../../assets/icones/star-inactive.svg";
@@ -20,7 +21,10 @@ function LogementCard({
   return (
     <div className="logement-card-container">
       <div className="logement-card">
-        <img src={cover} alt={title} className="logement-card-img" />
+        <div className="logement-card-slider">
+          <Slider cover={cover} pictures={pictures} title={title} />
+
+        </div>
         <h1 className="logement-card-title">{title}</h1>
         <p className="logement-card-location">{location}</p>
         <div className="logement-card-host">
