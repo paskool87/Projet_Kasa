@@ -7,7 +7,6 @@ function Dropdown({ title, children }) {
 
   return (
     <div className="dropdown">
-      <div className="dropdown-hide"></div>
       <div className="dropdown-header">
         <span>{title}</span>
         <span className={isOpen ? "arrow open" : "arrow"}>
