@@ -24,13 +24,16 @@
     background-color: #f6f6f6;
     padding: 10px;
     opacity: 1;
-    transition: transform 0.6s ease, max-height 0.8s ease;
+    transition:
+      transform 0.8s ease,
+      max-height 0.8s ease;
   }
 
   &-content.open {
     transform: translateY(0);
     opacity: 1;
-    max-height: 300px;
+    max-height: 600px;
+    transition-delay: 0s, 0.2s;
   }
   &-content.closed {
     position: relative;
@@ -39,9 +42,11 @@
     opacity: 1;
     max-height: 0;
 
-    transform: translateY(-150px);
+    transform: translateY(-200px);
     opacity: 1;
+    transition-delay: 0.3s, 0s;
   }
+
   .arrow {
     width: auto;
     transition: transform 0.3s ease;
