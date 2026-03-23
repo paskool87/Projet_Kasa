@@ -10,7 +10,9 @@
     display: flex; /* aligne les images horizontalement */
     width: 100%; /* prend la largeur totale de toutes les images */
     transition: transform 0.5s ease; /* animation de glissement */
-    gap: 10px;
+    gap: 0px;
+    margin: auto;
+    
     border: 2px solid blue;
 
     img {
@@ -19,6 +21,7 @@
       object-fit: cover;
       border-radius: 25px;
       flex-shrink: 0; /* empêche l’image de rétrécir dans le flex */
+      margin-left: 4px;
     }
   }
   .slider-arrow {

@@ -3,12 +3,16 @@ import arrowL from "../../assets/icones/arrowL.svg";
 import arrowR from "../../assets/icones/arrowR.svg";
 import "./Slider.scss";
 
-function Slider({ cover, pictures, title }) {
+function Slider({ pictures, title }) {
   const [currentIndex, setCurrentIndex] = useState(1);
   const sliderRef = useRef();
-  const slides = [cover, ...pictures];
-  const slidesWithClones = [slides[slides.length - 1], ...slides, slides[0]];
+  const slides = [ ...pictures];
+  const totalSlides = slides.length;
+  const LastImg = slides[totalSlides - 1];
+  const slidesWithClones = [LastImg, ...slides, slides[0]];
   const [isAnimating, setIsAnimating] = useState(false);
+
+  console.log("slidesWithClones:", slidesWithClones);
 
   const nextSlide = () => {
     if (isAnimating) return;
@@ -27,34 +31,28 @@ function Slider({ cover, pictures, title }) {
 
     if (isAnimating) {
       sliderRef.current.style.transition = "transform 0.5s ease";
-    }
-    else {
+    } else {
       sliderRef.current.style.transition = "none";
     }
 
     sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
   }, [currentIndex, isAnimating]);
 
-  const handleTransitionEnd = () => {
+const handleTransitionEnd = () => {
+  setIsAnimating(false);
+
+  if (currentIndex === slidesWithClones.length - 1) {
     setIsAnimating(false);
+    setCurrentIndex(1);
+    return;
+  }
 
-    // Si on est sur le clone de la première (tout à droite)
-    if (currentIndex === slidesWithClones.length - 1) {
-      sliderRef.current.style.transition = "none";
-      setCurrentIndex(1);
-      sliderRef.current.style.transform = `translateX(-100%)`;
-    }
-
-    // Si on est sur le clone de la dernière (tout à gauche)
-    if (currentIndex === 0) {
-      sliderRef.current.style.transition = "none";
-      setCurrentIndex(slides.length);
-      sliderRef.current.style.transform = `translateX(-${
-        slides.length * 100
-      }%)`;
-    }
-  };
-
+  if (currentIndex === 0) {
+    setIsAnimating(false);
+    setCurrentIndex(slides.length);
+    return;
+  }
+};
   return (
     <div className="slider-container">
       <div
