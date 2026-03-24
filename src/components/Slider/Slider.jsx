@@ -6,7 +6,7 @@ import "./Slider.scss";
 function Slider({ pictures, title }) {
   const [currentIndex, setCurrentIndex] = useState(1);
   const sliderRef = useRef();
-  const slides = [ ...pictures];
+  const slides = [...pictures];
   const totalSlides = slides.length;
   const LastImg = slides[totalSlides - 1];
   const slidesWithClones = [LastImg, ...slides, slides[0]];
@@ -31,28 +31,29 @@ function Slider({ pictures, title }) {
 
     if (isAnimating) {
       sliderRef.current.style.transition = "transform 0.5s ease";
-    } else {
+    }
+    else {
       sliderRef.current.style.transition = "none";
     }
 
     sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
   }, [currentIndex, isAnimating]);
 
-const handleTransitionEnd = () => {
-  setIsAnimating(false);
-
-  if (currentIndex === slidesWithClones.length - 1) {
+  const handleTransitionEnd = () => {
     setIsAnimating(false);
-    setCurrentIndex(1);
-    return;
-  }
 
-  if (currentIndex === 0) {
-    setIsAnimating(false);
-    setCurrentIndex(slides.length);
-    return;
-  }
-};
+    if (currentIndex === slidesWithClones.length - 1) {
+      setIsAnimating(false);
+      setCurrentIndex(1);
+      return;
+    }
+
+    if (currentIndex === 0) {
+      setIsAnimating(false);
+      setCurrentIndex(slides.length);
+      return;
+    }
+  };
   return (
     <div className="slider-container">
       <div

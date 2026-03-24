@@ -4,7 +4,6 @@
   height: auto; /* hauteur du slider */
   overflow: hidden; /* cache tout ce qui dépasse */
   margin: auto; /* centre le slider horizontalement */
-  border: 2px solid red;
 
   .slider-wrapper {
     display: flex; /* aligne les images horizontalement */
@@ -12,8 +11,6 @@
     transition: transform 0.5s ease; /* animation de glissement */
     gap: 0px;
     margin: auto;
-    
-    border: 2px solid blue;
 
     img {
       width: 100%;
@@ -21,22 +18,24 @@
       object-fit: cover;
       border-radius: 25px;
       flex-shrink: 0; /* empêche l’image de rétrécir dans le flex */
-      margin-left: 4px;
     }
   }
   .slider-arrow {
-  position: absolute;   /* se place par rapport au container */
-  top: 50%;             /* centre verticalement */
-  transform: translateY(-50%); /* ajuste exactement le centre */
-  width: 40px;          /* taille de la flèche */
-  height: 40px;
-  cursor: pointer;      /* indique que c’est cliquable */
-  z-index: 10;          /* au-dessus des images */    &.left {
-      background-color: green;
+    position: absolute; /* se place par rapport au container */
+    top: 50%; /* centre verticalement */
+    transform: translateY(-50%); /* ajuste exactement le centre */
+    width: 46px; /* taille de la flèche */
+    height: 79px;
+    cursor: pointer; /* indique que c’est cliquable */
+    z-index: 10; /* au-dessus des images */
+    &.left {
+      filter: drop-shadow(0 0 5px lightgrey);
+      margin-left: 25px;
     }
     &.right {
-      background-color: green;
       right: 0;
+      filter: drop-shadow(0 0 5px lightgrey);
+      margin-right: 25px;
     }
   }
 }
