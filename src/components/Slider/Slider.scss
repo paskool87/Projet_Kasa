@@ -1,13 +1,14 @@
 .slider-container {
   position: relative; /* pour positionner les flèches par dessus */
   width: 100%; /* largeur du slider */
-  height: auto; /* hauteur du slider */
+  height: 100%; /* hauteur du slider */
   overflow: hidden; /* cache tout ce qui dépasse */
   margin: auto; /* centre le slider horizontalement */
 
   .slider-wrapper {
     display: flex; /* aligne les images horizontalement */
     width: 100%; /* prend la largeur totale de toutes les images */
+    height: 100%; /* prend la hauteur du container */
     transition: transform 0.5s ease; /* animation de glissement */
     gap: 0px;
     margin: auto;
@@ -28,14 +29,28 @@
     height: 79px;
     cursor: pointer; /* indique que c’est cliquable */
     z-index: 10; /* au-dessus des images */
+
+            @media (max-width: 768px) {
+      width: 12px;
+      height: 20px;
+    }
+
     &.left {
       filter: drop-shadow(0 0 5px lightgrey);
       margin-left: 25px;
+
+      @media (max-width: 768px) {
+        margin-left: 5px;
+      }
     }
     &.right {
       right: 0;
       filter: drop-shadow(0 0 5px lightgrey);
       margin-right: 25px;
+
+      @media (max-width: 768px) {
+        margin-right: 5px;
+      }
     }
   }
 }

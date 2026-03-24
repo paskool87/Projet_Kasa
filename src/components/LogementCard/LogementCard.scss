@@ -3,6 +3,9 @@
   max-width: 1240px;
   position: relative;
   padding-bottom: 20px;
+  @media (max-width: 768px) {
+    padding-bottom: 50px;
+  }
 
   &-slider {
     width: 100%;
@@ -10,16 +13,31 @@
     object-fit: cover;
     border-radius: 25px;
     margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      aspect-ratio: 7/5;
+      margin-bottom: 15px;
+    }
   }
 
   &-title {
     font-size: 36px;
     font-weight: 500;
     color: #ff6060;
+    max-width: 85%;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
   }
 
   &-location {
     font-size: 18px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   &-host {
@@ -30,12 +48,20 @@
     bottom: 80px;
     right: 0;
     width: fit-content;
+    @media (max-width: 768px) {
+      bottom: 0px;
+    }
 
     &-name {
       max-width: 120px;
       font-size: 18px;
       color: #ff6060;
       text-align: end;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+        max-width: 80px;
+      }
     }
 
     img {
@@ -44,6 +70,11 @@
       border-radius: 50%;
       object-fit: cover;
       background-color: #c4c4c4;
+
+      @media (max-width: 768px) {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 
@@ -52,6 +83,10 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
+
+    @media (max-width: 768px) {
+      margin-top: 10px;
+    }
   }
 
   &-tag {
@@ -63,6 +98,12 @@
     border-radius: 10px;
     font-size: 14px;
     text-align: center;
+    font-weight: 700;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      min-width: 84px;
+    }
   }
 
   &-rating {
@@ -72,10 +113,18 @@
     position: absolute;
     bottom: 20px;
     right: 0;
+    @media (max-width: 768px) {
+      left: 0;
+    }
 
     img {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
+
+      @media (max-width: 768px) {
+        width: 13px;
+        height: 13px;
+      }
     }
   }
 }
@@ -88,6 +137,11 @@
   gap: 75px;
   margin-top: 15px;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+
   &-description {
     flex: 1;
     border-radius: 10px;
@@ -96,8 +150,8 @@
   &-equipments {
     flex: 1;
     border-radius: 10px;
-    li{
-    list-style: none;
+    li {
+      list-style: none;
     }
   }
 }

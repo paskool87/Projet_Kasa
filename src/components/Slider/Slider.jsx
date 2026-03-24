@@ -12,7 +12,6 @@ function Slider({ pictures, title }) {
   const slidesWithClones = [LastImg, ...slides, slides[0]];
   const [isAnimating, setIsAnimating] = useState(false);
 
-  console.log("slidesWithClones:", slidesWithClones);
 
   const nextSlide = () => {
     if (isAnimating) return;
