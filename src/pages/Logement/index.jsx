@@ -1,12 +1,15 @@
-import { useParams } from "react-router-dom"
-import logements from "../../Datas/logementsKasa.json"
-import LogementCard from "../../components/LogementCard/LogementCard"
+import { useParams, Navigate } from "react-router-dom";
+import logements from "../../Datas/logementsKasa.json";
+import LogementCard from "../../components/LogementCard/LogementCard";
 
 function Logement() {
+  const { id } = useParams();
 
-  const { id } = useParams()
+  const logement = logements.find((log) => log.id === id);
 
-  const logement = logements.find((log) => log.id === id)
+  if (!logement) {
+    return <Navigate to="/error" />;
+  }
 
   return (
     <div>
@@ -22,7 +25,7 @@ function Logement() {
         tags={logement.tags}
       />
     </div>
-  )
+  );
 }
 
-export default Logement
+export default Logement;
