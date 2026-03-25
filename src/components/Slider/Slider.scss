@@ -30,7 +30,7 @@
     cursor: pointer; /* indique que c’est cliquable */
     z-index: 10; /* au-dessus des images */
 
-            @media (max-width: 768px) {
+    @media (max-width: 768px) {
       width: 12px;
       height: 20px;
     }
@@ -51,6 +51,20 @@
       @media (max-width: 768px) {
         margin-right: 5px;
       }
+    }
+  }
+  .slider-counter {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    color: white;
+    filter: drop-shadow(0 0 5px black);
+    font-size: 24px;
+    font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      padding: 3px 6px;
     }
   }
 }

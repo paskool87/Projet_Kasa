@@ -8,10 +8,17 @@ function Slider({ pictures, title }) {
   const sliderRef = useRef();
   const slides = [...pictures];
   const totalSlides = slides.length;
+  const showArrows = totalSlides > 1;
   const LastImg = slides[totalSlides - 1];
   const slidesWithClones = [LastImg, ...slides, slides[0]];
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const displayIndex =
+    currentIndex === 0
+      ? totalSlides
+      : currentIndex === slidesWithClones.length - 1
+      ? 1
+      : currentIndex;
 
   const nextSlide = () => {
     if (isAnimating) return;
@@ -69,10 +76,19 @@ function Slider({ pictures, title }) {
           />
         ))}
       </div>
-
-      <img src={arrowL} className="slider-arrow left" onClick={prevSlide} />
-
-      <img src={arrowR} className="slider-arrow right" onClick={nextSlide} />
+      {showArrows && (
+        <div className="slider-arrows">
+          <img src={arrowL} className="slider-arrow left" onClick={prevSlide} />
+          <img
+            src={arrowR}
+            className="slider-arrow right"
+            onClick={nextSlide}
+          />
+          <div className="slider-counter">
+            {displayIndex} / {totalSlides}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
