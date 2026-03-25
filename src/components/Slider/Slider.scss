@@ -63,6 +63,7 @@
     font-weight: 500;
 
     @media (max-width: 768px) {
+      display: none;
       font-size: 12px;
       padding: 3px 6px;
     }
