@@ -3,6 +3,7 @@ import datas from "../../Datas/logementsKasa.json";
 import "./Gallery.scss";
 
 function Gallery() {
+  
   return (
     <div className="gallery">
       <div className="gallery-container">
