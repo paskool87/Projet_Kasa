@@ -9,7 +9,6 @@
     height: 223px;
     object-fit: cover;
     border-radius: 25px;
-    filter: brightness(40%);
   }
 
   &-title {
@@ -27,6 +26,7 @@
       1px 1px 0 black;
   }
 
+
   @media (max-width: 768px) {
 
     margin-bottom: 25px;
@@ -40,3 +40,16 @@
     }
   }
 }
+
+  .banner-light img {
+    filter: brightness(70%);
+    
+  }
+
+  .banner-dark img {
+    filter: brightness(40%);
+  }
+
+
+
+

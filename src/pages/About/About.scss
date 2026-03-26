@@ -1,13 +1,13 @@
+.about {
+  margin: auto;
+  max-width: 1240px;
 
-.about{
+
+  &-dropdowns {
+    max-width: 1025px;
     margin: auto;
-    max-width: 1240px;
-
-    &-dropdowns {
-        max-width: 1025px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
 }
